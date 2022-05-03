@@ -12,7 +12,29 @@
       </div>
     </main>
 
+<script>
+ //API
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()
 
+// Open a new connection, using the GET request on the URL endpoint
+//request.open('GET', 'https://codeforces.com/api/contest.hacks?contestId=566&apiKey=ed397bd636890f0eac77f2c0f86c3753ed3d3684&time=1651574125&apiSig=123456sha512Hex(123456/contest.hacks?apiKey=ed397bd636890f0eac77f2c0f86c3753ed3d3684&contestId=566&time=1651574125#e9b69ec9e71ba0d7a15272387c707817b8d6d031)', true)
+request.open("GET", "https://codeforces.com/api/user.info?handles=furqanalfath", true)
+
+request.onload = function () {
+  // Begin accessing JSON data here
+  // Begin accessing JSON data here
+var data = JSON.parse(this.response)
+console.log(data)
+//data.forEach(movie => {
+  // Log each movie's title
+////  console.log(movie.title)
+//})
+}
+
+// Send request
+request.send()
+</script>
 
   </body>
 
