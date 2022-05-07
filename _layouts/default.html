@@ -52,6 +52,10 @@ for (let i = 0; i < data.result.length - 1; i++) {
   cf_language[i] = data.result[i].programmingLanguage
   cf_verdict[i] = data.result[i].verdict
   cf_date[i] = data.result[i].creationTimeSeconds
+  
+    if (cf_verdict[i] == 'OK') {
+      solved++;
+  }
 }
 
 // HTML
@@ -139,14 +143,14 @@ for (let i = 0; i < 20; i++) {
     tbody.appendChild(cf_tr[i])
 }
 
+  var solve
+solve = document.getElementById("solved")
+solve.innerHTML = solved
+console.log(solved)
 
 }
 // Send request
 request.send()
-
-
-var asd = document.querySelectorAll("#table td");
-console.log(asd.replace('OK', 'monkey'));
 
 </script>
 
