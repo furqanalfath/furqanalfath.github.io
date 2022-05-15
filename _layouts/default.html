@@ -58,7 +58,7 @@ for (let i = 0; i < data.result.length - 1; i++) {
       solved++;
   }
 }
-
+solved = solved - 1
 // HTML
 let table = document.createElement('table');
 let thead = document.createElement('thead');
@@ -146,7 +146,7 @@ for (let i = 0; i < data.result.length - 1; i++) {
 
   var solve
 solve = document.getElementById("solved")
-solve.innerHTML = "<b>" + solved-1 + "</b>" + " solved problem"
+solve.innerHTML = "<b>" + solved + "</b>" + " solved problem"
 
 }
 // Send request
